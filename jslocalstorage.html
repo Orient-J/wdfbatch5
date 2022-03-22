@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Local Storage</title>
+	</head>
+	<body>
+
+		<script type="text/javascript">
+
+			//Store date in Local Storage
+
+			localStorage.setItem("name","aung aung");
+			localStorage.setItem("age",27); // going to number
+			localStorage.setItem("city","Yangon");
+
+
+			// Update
+			// Method 1
+			localStorage.setItem("name","kyaw kyaw");
+			// Method 2
+			localStorage.age = 30;
+
+			// Get
+
+			// let getname1 = localStorage.getItem("name");
+			// console.log(getname1);
+			// let getage1 = localStorage.getItem("age");
+			// console.log(getage1);
+			// console.log(typeof getage1);
+			// let getcity1 = localStorage.getItem("city");
+			// console.log(getcity1);
+
+			// Delete/Destroy
+
+			// // Method 1 (destory single)
+			// localStorage.removeItem("name");
+			// localStorage.removeItem("age");
+			// localStorage.removeItem("city");
+
+			// Method 2 (Destroy all)
+			// localStorage.clear();
+
+// __________________________________________________________
+
+	// Session Storage
+
+	// Store
+	// sessionStorage.setItem("name","Su Su");
+	// sessionStorage.setItem("age",30);
+	// sessionStorage.setItem("city","mandalay");
+
+	// ______
+
+	// Update
+	// Method 1
+	// sessionStorage.setItem("name","Yu Yu");
+	// Method 2
+	// sessionStorage.age = 40;
+
+	// ______
+
+	// Get
+	// let getname2 = sessionStorage.getItem("name");
+	// console.log(getname2);
+	// let getage2 = sessionStorage.getItem("age");
+	// console.log(getage2);
+	// console.log(typeof getage2);
+	// let getcity2 = sessionStorage.getItem("city");
+	// console.log(getcity2);
+
+
+	// ______
+
+	// Delete/Destroy
+	// Method 1 (destroy single)
+	// sessionStorage.removeItem("name");
+	// sessionStorage.removeItem("age");
+	// sessionStorage.removeItem("city");
+	// Method 2 (destroy all)
+	// sessionStorage.clear();
+
+
+
+
+		</script>
+	</body>
+</html>
+
+<!-- 
+Cookies 	Vs Local Storage 	Vs Session Storage
+
+br/sv      		br 				 	br
+4kb        		5-10 mbs         	5Mb
+all tabs   		all tabs 		 	private tab
+manually set    manually set       on tab close
+request 		no request 			no request 
+ -->

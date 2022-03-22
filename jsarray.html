@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+
+		<script type="text/javascript">
+
+
+
+
+
+
+			// Array (Manual array)
+
+			let j = new Array("aung aung","maung maung","kyaw kyaw","zaw zaw");
+
+			console.log(j);
+			console.table(j);
+			console.log(j[1]);
+			console.log(j[2]);
+			console.error(j[3]);
+
+			console.log(typeof j);
+
+			console.log(j.length);
+
+
+			let arr = ["su su","mya mya","hla hla","ma ma"];
+
+			console.log(arr);
+			console.log(arr[2]);
+
+			//undefined
+			console.log(arr[5]);
+			console.log(arr.length);
+
+
+
+
+
+
+			let x = [1200,1300,1400,1500];
+
+			
+			console.log(x[2]);
+			console.log(x.length);
+
+
+			let k = [20,"Hello","World",true,undefined,null,new Date(),{a:1,b:2}]
+
+			console.log(k);
+			console.log(k.length);
+			console.log(k[0]);
+			console.log(k[4]);
+			console.log(k[6]);
+			console.log(k[7])
+			console.log(k[7].a);
+			console.log(k[7].b);
+
+
+
+
+			let l = [1200,1300,"1400",1500]
+
+
+			console.log(typeof l);
+			console.log(typeof l[2]);
+			console.log(typeof l[3]);
+
+			console.log(l.indexOf(1300));
+
+			// if no value = -1
+
+			console.log(l.indexOf(1400));
+			console.log(l.indexOf(1600));
+
+
+
+
+			// String is Character Array in javascript
+
+			const name = "kyaw pyae sone";
+
+			console.log(name);
+			console.log(name.length);
+			console.log(name[5]);
+
+			console.log(name.indexOf("e"));
+
+
+			let m = [];
+
+			m[0] = "kyaw";
+			m[1] = 18;
+			m[5] = "student";
+
+			console.log(m);
+
+			let city = "yangon";
+
+			// it's array or not
+			// if array = true
+			console.log(Array.isArray(m));
+
+			//if it's not array = false
+			console.log(Array.isArray(city));
+
+			console.log(m);
+			console.log(typeof m);
+
+			// Array Datatype to String Datatype
+			console.log(m.toString());
+			// console.log(typeof m.toString());
+
+			console.log(m.join("-"));
+			console.log(typeof m.join("/"));
+
+			console.log(m);
+
+
+
+			const n = ["red","black","green","grey"];
+			n[4] = "blue";
+			console.log(n);
+
+			// Add new value to Array (add on to the end)
+
+			n.push("gold");
+			n.push("pink");
+			n.push("violet","white");
+			console.log(n);
+			console.log(n.length);
+			console.log(n[0]);
+
+
+			// Remove value & index number ( take off from front )
+			n.shift();
+			console.log(n);
+			console.log(n.length);
+			console.log(n[0]);
+
+			//Remove value 
+
+			delete n[2];
+			console.log(n);
+			console.log(n.length);
+
+
+			//Add new Value to array (add on to front)
+
+			n.unshift("tomato");
+			n.unshift("black");
+			console.log(n);
+			console.log(n.length);
+
+
+			//Remove value&index number (take off from end)
+
+			n.pop();
+			n.pop();
+			console.log(n);
+			console.log(n.length);
+
+
+						//where we want to start ,where we want to end
+							//index,space(length)
+
+			let q = n.splice(1,5) ;
+			console.log(q)
+
+
+			//Array Combine
+
+			const arr1 = ["aung aung","maung maung","kyaw kyaw"];
+			const arr2 = ["su su","nu nu","mya mya"];
+			const arr3 = [100,200,300]
+			console.log(arr1.concat(arr2));
+			console.log(arr2.concat(arr1));
+			console.log(arr2.concat(arr3));
+
+
+			//Array Sorting 
+
+			const arr4 = arr1.concat(arr2);
+
+			console.log(arr4.sort());
+			console.log(arr4.reverse());
+
+			//Just reverse ( sort() doesn't work in number )
+
+			const arr5 = [700,20,100,50,150,600];
+			console.log(arr5.sort());
+			console.log(arr5.reverse());
+
+
+			console.log(arr5.sort(function(x,y){
+				return x-y;
+			}));
+
+			console.log(arr5.sort((x,y)=>{
+				return y-x;
+			}));
+
+
+// __________________________
+
+			const funone = function(){
+				console.log("i am fun one");
+			};
+
+			const funtwo = function(){
+				console.log("i am fun two");
+			};
+
+			const funthree = function(){
+				console.log("i am fun three");
+			};
+			
+			const arrfuns = [];
+
+			arrfuns.push(funone);
+			arrfuns.push(funtwo);
+			arrfuns.push(funthree);
+			arrfuns.push(funone);
+
+
+			console.log(arrfuns);
+
+			const output = arrfuns.filter(function(arrfun){
+				
+				// console.log(arrfun);
+
+				// if(arrfun === funtwo){
+				// 	return arrfun;
+				// };
+
+				if(arrfun != funtwo){
+					return arrfun;
+				};
+			});
+
+			console.log(output);
+
+
+
+
+			//To be continue//
+		</script>
+	</body>
+</html>

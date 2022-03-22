@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Date and Time</title>
+	</head>
+	<body>
+
+		<small>Copyright &copy; <span id="year">2016</span> </small>
+
+		<script type="text/javascript">
+
+			//DATE TIME (CLASS METHOD)
+
+			let date = new Date();
+				// console.log(date);
+				// console.log(typeof date);
+
+			// let hours = new Date().getHours();
+			let hours = date.getHours();
+				console.log(hours);
+
+			let minutes = new Date().getMinutes();
+			// let minutes = date.getMinutes();
+				console.log(minutes);
+
+			// let seconds = new Date().getSeconds();
+			let seconds = date.getSeconds();
+				console.log(seconds);
+
+			// 1 s = 1000ms
+			// 1 Jan 1970 > upnow
+			let gettime = date.getTime();
+				console.log(gettime);
+
+					// (Or)
+
+			let now = Date.now()
+				console.log(now);
+
+			// let getdate	 = new Date	.getDate();
+			let getdate = date.getDate();
+				console.log(getdate);
+
+			// jan = 0
+			// let getmonth = new Date().getMonth();
+			let getmonth = date.getMonth();
+				console.log(getmonth);
+
+			//sun = 0
+			// let getday = new Date().getDay();
+			let getday = date.getDay();
+				console.log(getday);
+			
+			// let getyear = new Date().getFullYear();
+			let getyear = date.getFullYear();
+				console.log(getyear);
+
+					// (or)
+
+			// let getutcyear = new Date().getUTCFullYear();
+			let getutcyear = date.getUTCFullYear();
+				console.log(getutcyear);
+
+			document.getElementById("year").textContent = getutcyear
+
+			//m : d : y // h : m : s
+			let bd = new Date("10-14-2002");
+			bd = new Date('10/14/2002');
+			bd = new Date('Sep 11 2002');
+			bd = new Date('Sep 11 2002 11:35:00');
+			bd = new Date('10/14/2002 5:13:50');
+				console.log(bd);
+
+			bd.setMonth(3);
+			bd.setDate(20);
+			bd.setFullYear(2021);
+			bd.setHours(11);
+			bd.setMinutes(20);
+			bd.setSeconds(55);
+			console.log(bd);
+		</script>
+	</body>
+</html>

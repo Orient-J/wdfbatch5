@@ -1,0 +1,153 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Stick&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');*/
+
+/*Global Font Integrated by Local Folder*/
+
+/*@font-face{
+	font-family:stick;
+
+	src:local("Stick-Regular"),url("../libs/font/stick/Stick-Regular.ttf") format("woff");
+
+}
+
+@font-face{
+	font-family:"abc";
+
+	src:local("AkayaTelivigala-Regular"),url("../libs/font/akayatelivigala/AkayaTelivigala-Regular.ttf") format("woff");
+}*/
+
+
+
+/*Global Font Integrated*/
+
+
+
+
+
+
+/*Local Font Integrated*/
+/*LM("Local Machine")*/
+
+
+/*body{
+*/	/*font-family:Century;*/
+
+	/*font-family:"Times New Roman";*/
+
+	/*font-family:"Palace Script MT";*/
+
+/*}
+*/
+
+
+/*.p1{
+	font-family: 'Stick', sans-serif;	
+}
+
+.p2{
+	font-family: 'abc', cursive;
+}
+
+.p3{
+	font-family: 'Stick', sans-serif;
+}*/
+
+
+/*.p1{
+
+	font-family:Century;
+}
+
+.p2{
+	font-family:Arial;
+}
+
+.p3{
+	font-family:Century,Arial,"Times New Roman";
+}
+
+
+
+.p1{
+		/*text-transform:lowercase;*/
+		/*text-transform:uppercase;*/
+		/*text-transform:capitalize;*/
+
+		/*font-variant:small-caps;*/
+
+		/*text-indent:50PX;*/
+
+		/*font-style:italic;*/
+
+		/*font-weight:bold;*/
+
+		/*font-weight:600;*/
+/*}*/
+
+
+.a1{
+	text-decoration:none;
+
+	color:red;
+}
+
+.a1:visited{			/*link visted*/
+	color:green;
+}
+
+.a1:hover{
+	color:cyan;
+	font-size:25px;
+}
+
+.menutext{
+	font-family:Arial,Cambria,Century;
+	text-decoration:none;
+	background-color:black;
+	color:cyan;
+
+	/*padding:10px;*/
+
+
+		/*top & bottom*/ /*left & right*/
+	/*padding:10px 20px;*/
+
+		/*top  right  bottom  left*/
+	/*padding:10px 20px 30px 40px;*/
+
+	padding-top:10px;
+
+	padding-right:20px;
+
+	padding-bottom:10px;
+
+	padding-left:20px;
+
+	border-radius:5px;
+
+}
+
+.menutext:hover{
+	color:white;
+	background-color:cyan;
+	border-radius:50px;
+
+	font-size:25px;
+
+	transition:0.5s;
+}
+
+.imgdesign{
+	width:80px;
+	height:80px;
+
+	cursor:pointer;
+}
+
+.imgdesign:hover{
+	width:100px;
+	height:100px;
+
+	transition:1s;
+}

@@ -1,0 +1,48 @@
+nav{
+	width:1200px;
+
+}
+
+nav ul{
+	list-style:none;
+}
+
+nav ul li{
+	width:250px;
+	text-align:center;
+	line-height:50px;/*for height*/
+
+	/*display:inline;*/
+	float:left;
+
+	color:#fff;
+	background-color:orange;
+	border-right:1px solid blue;
+
+	/*transition:all 1s;*/
+	/*transition:background-color 1s;*/
+	transition:background-color 1s,line-height 2s;
+}
+
+/*.fas,.fab,.far,.fal{
+	color:red;
+}*/
+
+nav ul li:last-of-type{
+	border-right:0;
+}
+
+nav ul li:first-of-type{
+	border-left:2px solid blue;
+}
+
+
+nav ul li:hover{
+	background-color:cyan;	
+	line-height:60px;
+}
+
+nav ul li a{
+	color:#fff;
+	text-decoration:none;
+}

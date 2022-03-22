@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Block Scopr and Function Scope</title>
+	</head>
+	<body>
+
+		<script type="text/javascript">
+
+			// const name = "aung aung";
+			//	name = "aung aung";
+			// const name = "kyaw kyaw";
+			// console.log(name);
+
+			// let name = "su su";
+			// 	name = "aye aye"
+			// let name = "chan chan";
+			// console.log(name);
+
+			// var name = "zaw zaw";
+			// 	name = "maw maw";
+			// var name = "thaw thaw";
+			// var name = "tar tar";
+			// console.log(name);
+
+// _________________________________________________________________________________
+
+
+// Function
+			var a = 1;
+			let b = 2;
+			const c = 3;
+
+			console.log("Global Scope : = " , a , b , c);
+
+			function myfunone(){
+				return a+b+c;
+			};
+
+			console.log("Using Global Scope variables in function = " , myfunone() ); //result = 6
+
+			function myfuntwo(){
+				a = 10;
+				b = 20;
+				// c = 30; // can not overwrite cuz const 
+
+				console.log("Overwrite / Global Scope variables in function = " , a , b , c);
+			};
+
+			myfuntwo();
+
+			console.log("Global Scope : = ", a , b , c); //result = 10 20 30 (value changed )
+
+			console.log("Using Global Scope variable in function = ", a , b , c);
+
+			var x = 1;
+			let y = 2;
+			const z = 3;
+
+			function myfunthree(){
+
+				var x = 4;
+				let y = 5;
+				const z = 6;
+
+				console.log("Overwrite / Global Scope variables in function by var/let/const = " ,x, y, z); //result = 4 5 6
+
+				var h = 100;
+				let i = 200;
+				const j = 300;
+
+				console.log("h,i,j variable is inside of function = " , h, i, j); //result = 100 200 300
+			};
+
+			myfunthree();
+
+			console.log("Global Scope : = ", x , y , z); //result = 1 2 3
+
+			// console.log("h,i,j variable in function = " , h, i, j); //h,i,j is not defined
+
+// _________________________________________________________________________________
+
+
+// Statement
+
+	var h = 1;
+	let k = 2;
+	const l = 3;
+
+	if(true){
+		console.log("Using Global Scope variables in if statement = ",h,k,l);
+	};
+
+	if(true){
+		j = 10;
+		k = 20;
+		// l = 30;l  // can't overwrite cuz constant
+
+		console.log("Overwrite / Global Scope variables in if statement = " ,j,k,l);
+	};
+
+	console.log("Global Scope = ",j,k,l); // result = 10 20 3
+
+
+	var m = 1;
+	let n = 2;
+	const o = 3;
+
+	if(true){
+
+		var m = 4;
+		let n = 5;
+		const o = 6;
+
+		console.log("Overwrite / Global Scope variables in if statement = ",m,n,o);
+
+		var q = 100;
+		let r = 200;
+		const s = 300;
+
+		console.log("q,r,s variables in if statement = ",q,r,s );
+	}; 
+
+
+	// ****
+
+		console.log("Global Scope = ",m,n,o); // result = 4 2 3
+
+	// *****
+
+		// console.log("q,r,s variable in function = " , q,ris j); //q,r,s is not defined
+
+// _________________________________________________________________________________
+
+
+// Loop
+	
+	// result = 0 / error (cause const cant OVERWRITE even in looping)
+
+	// for(const x = 0 ; x < 10 ; x++){
+	// 	console.log(x);
+	// };
+
+	// for(let d = 0 ; d < 10 ; d++){
+	// 	console.log(d);
+	// };
+
+	// console.log("d outside value is = ",d); // d is not defined
+
+
+	// let d = 100;
+	// console.log("d value is = ",d);
+
+
+
+	// for(var e = 0 ; e < 10 ; e++){
+	// 	console.log(e);
+	// };
+
+	// console.log("e outside value is = ",e); //10
+
+	// let e = "aung aung";
+	// console.log("e value is = " , e); //error
+
+
+	 // var num1 = 0;
+	 // let num2 = 0;
+	 // const num3 = 0;
+
+	 // for(num1 ; num1 < 10 ; num1++){
+	 // 	console.log("looping var num1 = ",num1);
+	 // };
+
+	 // console.log("Global Scope = ",num1,num2,num3); //10 0 0
+
+	 // for(num2; num2 < 10 ; num2++){
+	 // 	console.log("looping let num2 = ",num2);
+	 // };
+
+	 // console.log("Global Scope = ",num1,num2,num3); //10 10 0
+
+
+	// result = 0 / error (cause const cant OVERWRITE even in looping)
+	// for(num3 ; num3 < 10 ; num3++){
+	// 	console.log("looping const num3 = ",num3)
+	// };
+
+	var num5 = 1;
+	let num6 = 2;
+	const num7 = 3;
+
+
+	for(var num5 = 0; num5 < 10 ; num5++){
+		console.log("looping var num5 = ",num5);
+	};
+
+	console.log("Global Scope ",num5,num6,num7); // result 10 2 3
+
+
+	for(let num6 = 0; num6 < 10 ; num6++){
+		console.log("looping let num6 = ",num6); 
+	};
+
+// *****
+	console.log("Global Scope ",num5,num6,num7); // result 10 2 3
+// *****
+
+
+	// result = 0 / error (cause const cant OVERWRITE even in looping)
+	// for(const num7 = 0; num7 < 10 ; num7++){
+	// 	console.log("looping const num7 = ",num7);
+	// };
+
+// _________________________________________________________________________________
+
+
+	// Object 
+
+
+		// var student = {
+
+		// 	name : "aung kyaw kyaw",
+		// 	age : 18,
+		// 	phone : "123456"
+		// };
+
+		// console.log(student);
+		// console.log(student.name,student.age,student.phone);
+
+
+		// student.city = "Mandalay";
+		// console.log(student);
+		// console.log(student.city);
+
+
+		// student.age = 20;
+		// console.log(student);	
+		// console.log(student.age);	
+
+
+		// student = {
+		// 	name : "aung zaw zaw"
+		// };
+
+		// console.log(student);
+		// console.log(student.name,student.age,student.phone); // result = aung zaw zaw undefined undefined
+
+
+
+
+
+
+		// let student = {
+
+		// 	name : "aung kyaw kyaw",
+		// 	age : 18,
+		// 	phone : "123456"
+		// };
+
+		// console.log(student);
+		// console.log(student.name,student.age,student.phone);
+
+
+		// student.city = "Mandalay";
+		// console.log(student);
+		// console.log(student.city);
+
+
+		// student.age = 20;
+		// console.log(student);	
+		// console.log(student.age);	
+
+
+		// student = {
+		// 	name : "aung zaw zaw"
+		// };
+
+		// console.log(student);
+		// console.log(student.name,student.age,student.phone); // result = aung zaw zaw undefined undefined
+
+
+
+
+		const student = {
+
+			name : "aung kyaw kyaw",
+			age : 18,
+			phone : "123456"
+		};
+
+		console.log(student);
+		console.log(student.name,student.age,student.phone);
+
+
+		student.city = "Mandalay";
+		console.log(student);
+		console.log(student.city);
+
+
+		student.age = 20;
+		console.log(student);	
+		console.log(student.age);	
+
+
+		// error
+		// student = {
+		// 	name : "aung zaw zaw"
+		// };
+
+		// console.log(student);
+
+
+		</script>	
+	
+	</body>
+</html>

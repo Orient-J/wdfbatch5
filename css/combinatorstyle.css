@@ -1,0 +1,135 @@
+/*Tag to Tag*/
+
+/*div span{
+	color:orange;
+}*/
+
+/*Tags to Multi Tags*/
+
+/*
+div span p{
+	color:blue;
+}*/
+
+/*div p{
+
+	color:red;
+}*/
+
+/*Multi Tags to Class*/
+
+/*div span .name{
+
+	color:orange;
+}
+*/
+/*Multi Tags with sameclass*/
+
+/*child element child class*/
+
+/*div span small.name{
+	color:blue;
+}*/
+
+/*Tag to Class*/
+
+/*div .address{
+	color:cyan;
+}
+*/
+
+/*Tag To Multi Classes*/
+
+/*div .name .age{
+
+	color:blue;
+}
+*/
+
+/*Class to Class*/
+
+/*.money .currency{
+	color:blue;
+}
+*/
+/*Class to Multi Class*/
+
+/*.bank .money .currency{
+	color:red;
+}*/
+
+/*Class to Tag*/
+
+/* .container b{
+
+	color:orange;
+} */
+
+/* Class to Tags */
+
+/* .container b span{
+	color:blue;
+}	 */
+
+/* Same Class */
+/* .mobile.jpn{
+	color:green;
+}
+
+.mobile.cn{
+	color:yellow;
+}
+
+.mobile.us{
+	color:blue;
+} */
+
+/* Class to same class */
+
+/* .vehicle .car.jpn{
+	color:blue;
+}
+
+.vehicle .car.cn{
+	color:yellow;
+}
+
+.vehicle .car.indo{
+	color:red;
+} */
+
+/* Class to Tag by group selector */
+
+/* .div1 b,.div1 p{
+	color:red;
+} */
+
+
+
+
+
+
+
+/* Child Selector ( > ) */
+
+/* .div2 > i{
+	color:red;
+} */
+
+/* Sibiling Selector */
+
+/* 1.General Sibiling selector */
+
+/* 2.Adjacent Sibiling Selector */
+
+/* 1.General Sibiling selector */
+
+/* .div4 ~ i{
+	color:red;
+} */
+
+/* 2.Adjacent Sibiling Selector */
+
+.div7 + b{
+	color:red;
+}

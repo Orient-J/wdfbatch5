@@ -1,0 +1,121 @@
+.borderstyle1{
+	border-style:solid;
+}
+.borderstyle2{
+	border-style:double;
+}
+
+.borderstyle3{
+	border-style:dotted;
+}
+
+.borderstyle4{
+	border-style:dashed;
+}
+
+.borderstyle5{
+	border-style:inset;
+}
+
+.borderstyle6{
+	border-style:outset;
+}
+
+.bddesign{
+	width:300px;
+	height:300px;
+	background-color:orange;
+	color:white;
+
+					/*All angle*/
+	/*border-radius:10px;*/
+	/*border-radius:50%;*/
+
+					/*left-top right-top right-bottom left-bottom		clockwise*/
+
+					/*left-top  +  right-bottom is 20px*/   /* right-top  +  left-bottom is 50px*/
+	/*border-radius:20px 50px;*/
+
+
+	/*left-top >>> right-top->>> right-bottom>>>left-bottom*/
+	/*border-radius:10px 50px 100px 300px;*/
+
+	border-top-left-radius:30px;
+	border-top-right-radius:50px;
+	border-bottom-left-radius:70px;
+	border-bottom-right-radius:100px;
+
+}
+
+/*ul{
+	list-style-type:square;
+	list-style-type:circle;
+	list-style-type:none;
+	list-style:none;
+}*/
+
+li{
+	/*list-style-type:square;
+	list-style-type:circle;
+	list-style-type:none;
+	list-style:none;*/
+
+	/*list-style-type:decimal;*/
+	list-style-type:decimal-leading-zero;
+
+
+/*short Hand*/
+
+		  /*s	    s     c*/			
+	/*border:1px dashed red;*/
+
+	border:1px;
+
+	border-style:solid;
+
+	border-color:red;
+
+	/*list-style-position:inside;*/
+	/*list-style-position:outside;default*/
+}
+
+input[type="email"]{
+	width:300px;
+	color:white;
+
+
+	/*background-color:green;*/
+
+	background:green;
+
+	border-radius:10px;
+}
+
+body{
+	background-image:url("../img/fav/favicon2.png");
+
+	/*background:("../img/fav/favicon2.png");*/
+
+	background-repeat:no-repeat;
+
+	/*background-position:center;*/
+	/*background-position:right;*/
+	/*background-position:left;*/
+	/*background-position:top;*/
+	/*background-position:bottom;*/
+
+	/*background-attachment:fixed;*/
+	/*background-attachment:scroll;*/
+
+	/*background-position:right center;*/
+	/*background-position:left center;*/
+
+	/*background-position:right bottom;*/
+	/*background-position:left bottom;*/
+
+	/*background-position:right top;*/
+	/*background-position:left top;*/
+
+	/*background-size:cover;*/
+}
+

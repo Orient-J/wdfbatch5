@@ -1,0 +1,42 @@
+.divtop{
+	width:1200px;
+	height:150px;
+
+	border:2px solid green;
+}
+
+.divleft{
+	width:100px;
+	height:700px;
+
+	float:left;
+
+	border:2px solid green;
+}
+
+.divcenter{
+	width:900px;
+	height:700px;
+
+	float:left;
+
+	border:2px solid green;
+}
+
+.divright{
+	width:200px;
+	height:700px;
+
+	float:left;
+
+	border:2px solid green;
+}
+
+.divbottom{
+	width:1200px;
+	height:100px;
+
+	clear:both;
+
+	border:2px solid green;
+}

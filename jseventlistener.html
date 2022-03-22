@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Event Listener</title>
+	</head>
+	<body>
+
+		<div>
+			<h3>SHOW HIDE BUTTON</h3>
+			<div id="paragraph">
+				<p id="p1">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+			</div>
+			<!-- <button type="button" id="hideme" class="" onclick="hideme()">Hide Me</button> -->
+
+			<button type="button" id="hideme" class="" >Hide Me</button>
+		</div>
+
+
+		<hr/>
+
+
+		<div>
+
+			<p id="mm">We Love Myanmar</p>
+			<button type="button" id="red" class="">Red</button>
+			<button type="button" id="green" class="">Green</button>
+			<button type="button" id="blue" class="">Blue</button>
+			<button type="button" id="orange" class="">Orange</button>
+			<button type="button" id="bold" class="">Bold Text</button>
+			<button type="button" id="italic" class="">Italic Text</button>
+			<button type="button" id="underline" class="">Underline Text</button>
+
+		</div>
+
+
+		<hr/>
+
+		<div>
+
+
+			<form action="" method="">
+
+				<label for="name">Name</label><br/>
+				<input type="text" name="name" id="name" class="" onchange="myfun()"/>
+
+				<br/>
+				<br/>
+
+				<label for="address">Address</label><br/>
+				<input type="text" name="address" id="address" class="" />
+
+
+				<br/>
+				<br/>
+
+				<label for="gender">Gender</label>
+				<select name="gender" id="gender" class="" onchange="genderfun()">
+					<option disabled selected>Choose Gender</option>
+					<option value="1">Male</option>
+					<option value="0">Female</option>
+				</select>
+
+				<br/>
+				<br/>
+
+				<label for="country">Country</label>
+				<select name="country" id="country" class="" onchange="countryfun()">
+
+					<option disabled selected>Choose Country</option>
+					<option value="mm">Myanmar</option>
+					<option value="th">Thailand</option>
+
+				</select>
+
+				<br/>
+				<br/>
+
+				<div id="mmcity">
+
+					<input type="radio" name="city" id="cityygn" class="" value="yangon" /><label for="cityygn">Yangon</label>
+					<input type="radio" name="city" id="citymdy" class="" value="mandalay" /><label for="citymdy">Mandalay</label>
+					<input type="radio" name="city" id="citybgo" class="" value="bago" /><label for="citybgo">Bago</label>
+
+				</div>
+
+				<div id="thcity">
+
+					<input type="radio" name="city" id="citybkk" class="" value="bangkok" /><label for="citybkk">Bangkok</label>
+					<input type="radio" name="city" id="citypkt" class="" value="phuket" /><label for="citypkt">Phuket</label>
+					<input type="radio" name="city" id="citymst" class="" value="maesot" /><label for="citymst">Mae Sot</label>
+
+				</div>
+
+			</form>
+
+
+		</div>
+
+
+
+
+		<script type="text/javascript">
+
+			let pgh = document.getElementById("paragraph");
+			let hidemebtn = document.getElementById("hideme");
+
+
+			// function hideme(){
+			// 	// console.log("Hay i am working");
+			// 	// console.log(pgh);
+
+			// 	// pgh.style.display = "none";
+			// 	// hidemebtn.innerText = "Show Me";
+
+			// 	if(pgh.style.display === "none"){
+
+			// 		pgh.style.display = "block";
+			// 		hidemebtn.textContent = "Hide Me";
+
+			// 	}else{
+
+			// 		pgh.style.display = "none";
+			// 		hidemebtn.innerHTML = "Show Me";
+			// 	};
+
+			// };
+
+
+			hidemebtn.addEventListener("click",function(){
+
+				console.log("i am working");
+
+				if(pgh.style.display === "none"){
+
+					pgh.style.display = "block";
+					hidemebtn.textContent = "Hide Me";
+
+				}else{
+
+					pgh.style.display = "none";
+					hidemebtn.innerHTML = "Show Me";
+				};
+			});
+
+
+			document.getElementById("red").addEventListener("click",function(){
+				document.getElementById("mm").style.color = "red";
+			});
+
+			document.getElementById("green").addEventListener("click",function(){
+				document.getElementById("mm").style.color = "green";
+			});
+
+			document.getElementById("blue").addEventListener("click",function(){
+				document.getElementById("mm").style.color = "blue";
+			});
+
+			document.getElementById("orange").addEventListener("click",function(){
+				document.getElementById("mm").style.color = "orange";
+			});
+
+			document.getElementById("bold").addEventListener("click",function(){
+				document.getElementById("mm").style.fontWeight = "bold";
+			});
+
+			document.getElementById("italic").addEventListener("click",function(){
+				document.getElementById("mm").style.fontStyle = "italic";
+			});
+
+			document.getElementById("underline").addEventListener("click",function(){
+				document.getElementById("mm").style.textDecoration = "underline";
+			});
+
+
+			//for name
+
+			function myfun(){
+
+				// console.log("Thanks for typing");
+
+				let txtname = document.getElementById("name");
+				//console.log(txtname.value);
+
+				txtname.value = txtname.value.toUpperCase();
+
+			};
+
+			// value is attribute
+			// txtname = input tag
+			// txtname.value = [input tag].value
+
+			// for gender
+
+			function genderfun(){
+				// console.log("hay i am working");
+
+				let gnd = document.getElementById("gender");
+				// console.log(gnd.value);
+				// console.log(typeof gnd.value);
+
+					switch(gender.value){
+
+						case "0":
+							window.alert("Thanks Lady");
+						break;
+
+						case "1":
+							window.alert("Thanks Thar Gyi");
+						break;
+
+					}
+			};
+
+
+
+			// for country
+
+			document.getElementById("mmcity").style.display = "none";
+			document.getElementById("thcity").style.display = "none";
+
+			function countryfun(){
+
+				// console.log("i am working");
+
+				let country = document.getElementById("country");
+				// console.log(country.value);
+
+					switch(country.value){
+
+						case "mm":
+							document.getElementById("mmcity").style.display = "block";
+							document.getElementById("thcity").style.display = "none";
+						break;
+
+						case "th":
+							document.getElementById("thcity").style.display = "block";
+							document.getElementById("mmcity").style.display = "none";
+						break;
+					};
+
+			};
+
+		</script>
+	</body>
+</html>

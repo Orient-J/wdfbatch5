@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Window Objects</title>
+
+		<style type="text/css">
+
+			@media print{
+				*{
+					visibility: hidden;
+				}
+
+				#printarea *{
+					visibility: visible;
+				}
+
+			}
+
+			@page {
+				/*size: portrait;*/
+				/*size: landscape;*/
+				size: auto;
+				margin: 0;
+			}
+
+		</style>
+	</head>
+	<body>
+
+		<button onclick="printme()">Print</button>
+		<button onclick="refresh()">Refresh</button>
+
+		<hr/>
+
+		<div id="printarea">
+
+			<div>
+
+			<h1>This is paragraph one</h1>
+
+			<p>
+
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+			</p>
+
+		</div>
+
+		<div>
+
+			<h1>This is paragraph 2</h1>
+
+			<p>
+
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+			</p>
+
+		</div>
+
+		</div>
+
+		<div>
+
+			<h1>This is paragraph 3</h1>
+
+			<p>
+
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+			</p>
+
+		</div>
+
+		<pre>
+
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.			
+
+		</pre>
+
+
+		<script type="text/javascript">
+			
+			// Window Objects
+
+			// Alert
+				// window.alert("Hello World");
+
+			// Prompt
+				// const input = prompt("write something");
+				// console.log(input);
+
+			// Confirm
+				// if(confirm("Are you sure")){
+				// 	console.log("yes i am sure");
+				// }else{
+				// 	console.log("no i am not");
+				// }
+
+				
+
+			// Print
+				// window.print()
+
+				function printme(){
+					// console.log("hay");
+					window.print();
+				};
+
+
+
+				let val;
+
+			// outerWidth/outerHeight
+
+				val = window.outerWidth;
+				console.log("this is outer width " + val);
+				val = window.outerHeight;
+				console.log("this is outer height " + val);
+
+
+
+			// innerWidth/innerHeight
+
+				val = window.innerWidth;
+				console.log("this is inner width " + val);
+				val = window.innerHeight;
+				console.log("this is inner height " + val);
+
+			// Scroll Points
+
+				val = window.scrollY
+				console.log(val);
+
+				val = window.scrollX
+				console.log(val);
+
+		// Location Object
+
+			// console.log(window.location);
+
+			//Redirect
+
+				// window.location.href = "https://google.com";
+
+
+			// Reload
+
+				// window.location.reload();
+
+				function refresh(){
+					window.location.reload();
+				};
+
+		//Navigator Object
+
+			// console.log(window.naivgator);
+
+			// userAgent
+
+				document.write("navigator.userAgent result = " + window.navigator.userAgent + "<br/>");
+
+			// CookieEnabled 
+
+				document.write("navigator.cookieEnabled result = " + window.navigator.cookieEnabled + "<br/>");
+
+			// language
+
+				document.write("navigator.language result = " + window.navigator.language + "<br/>");
+
+			//onLine
+
+				document.write("navigator.onLine result = " + window.navigator.onLine + "<br/>");
+
+
+
+			if(confirm("is sayar okay")){
+				console.log("Sayar is okay");
+			}else{
+				console.log("Nope he is not");
+			};
+
+		</script>
+
+	</body>
+</html>

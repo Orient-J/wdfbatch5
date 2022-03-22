@@ -1,0 +1,43 @@
+/*Element Selector*/
+/*Single Selector*/
+
+h1{
+	color:red;
+}
+
+/*Group Selector(,)*/
+
+h2,h3,h4{
+	color:red;
+}
+
+/*#myself{
+	color:red;
+}
+
+#pray{
+	color:blue;
+}
+
+#japu{
+	color:green;
+}*/
+
+#pray,#japu{
+	color:blue;
+}
+
+.redcolor{
+	color:red;
+}
+.f20{
+	font-size:50px;
+}
+
+.abc,.efg{
+	color:orange;
+}
+
+/*.efg{
+	color:orange;
+}*/

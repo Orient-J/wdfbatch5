@@ -1,0 +1,24 @@
+/*.paragraph1::first-line{
+	color:red;
+}*/
+
+/*.paragraph1::before{
+	content:"A B C ";
+}*/
+
+/*
+.paragraph1::after{
+	content:"Kyaw Kyaw";
+}*/
+
+/*.paragraph1::first-letter{
+	color:red;
+	font-size:50px;
+}*/
+
+/*.paragraph1::selection{
+
+	background-color:orange;
+	color:cyan;
+	font-style: italic;
+}*/

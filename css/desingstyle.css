@@ -1,0 +1,101 @@
+/*Universal Selector*/
+
+*{
+	cursor:pointer;
+}
+.firstdiv{
+	width:200px;
+	height:200px;
+
+	/*background-color:black;*/
+	/*background-color:#bbee;*/
+	background-color:rgba(21,30,127,1);
+
+	/*opacity:0.5;*/
+	opacity:1;
+
+	color:cyan;
+	font-size:30px;
+}
+
+.seconddiv{
+
+	width:200px;
+	height:200px;
+
+	/*background-color:green;*/
+	font-size:30px;
+	color:cyan;
+
+	/*border:3px solid red;*/
+
+	border:3px;
+	border-style:solid;
+	border-color:blue;
+
+	background-image:url("../img/mount.png");
+	background-repeat:no-repeat;
+	/*background-repeat:repeat;*/
+	/*background-repeat:repeat-x;*/
+	/*background-repeat:repeat-y;*/
+
+	background-position:center;
+	/*background-size:cover;*/
+}
+
+.divthree{
+	width:300px;
+	height:300px;
+
+	/*background-color:black;*/
+
+	color:white;
+	font-size:30px;
+
+	/*background:linear-gradient(cyan,pink,aqua,lightgreen);*/
+	/*background-image:linear-gradient(cyan,pink,aqua,red);*/
+
+	/*background:linear-gradient(#a84632,#1c1cc7,#d5db16);*/
+
+	/*background:linear-gradient(rgba(31,237,127,1),rgba(229,47,127,1),rgba(227,243,127,1));*/
+
+
+
+	/*background:radial-gradient(cyan,pink,aqua,lightgreen);*/
+
+	/*background:radial-gradient(#a84632,#1c1cc7,#d5db16);*/
+
+	/*background:radial-gradient(rgba(31,237,127,1),rgba(229,47,127,1),rgba(227,243,127,1))*/
+
+
+
+
+	/*background:linear-gradient(45deg,cyan,red);*/
+
+	/*background:linear-gradient(
+		-45deg,
+		cyan,
+		lightgreen);*/
+
+	/*background:radial-gradient(
+		45deg,
+		cyan,
+		lightgreen);*/ /*cannot use deg in radial*/
+
+
+	background:linear-gradient(
+
+		45deg,
+		cyan 40%,
+		lightgreen 10%
+		);
+
+}
+
+.divfour{
+
+	width:200px;
+	height:200px;
+	background-image:linear-gradient(-45deg,rgba(21,30,127,0),rgba(31,237,127,0.2)),url("../img/mount.png");
+	background-repeat:no-repeat;
+}

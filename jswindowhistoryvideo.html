@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Window History Video</title>
+
+		<style type="text/css">
+
+			body{
+				display: flex;
+				justify-content: center;
+				
+			}
+
+			nav{
+				margin-bottom: 50px;
+			}
+
+			ul{
+				list-style: none;
+
+				padding: 0;
+				margin: 0;
+
+				display: flex;
+			}
+
+			li{
+				width: 200px;
+				background-color: green;
+				color: #fff;
+
+				padding: 20px 0;
+				text-align: center;
+
+				transition: all 0.2s;
+			}
+
+			li:hover{
+				background-color: orange;
+			}
+
+			a{
+				text-decoration: none;
+			}
+
+			.active{
+				background-color: orange;
+			}
+
+			.historybar{
+				background-color: silver;
+			}
+
+			.historybar span{
+				cursor: pointer;
+			}
+
+
+			div h1{
+				text-align: center;
+			}
+
+		</style>
+
+	</head>
+	<body>
+
+		<div>
+			
+			<nav>
+
+				<ul>
+
+					<a href="jswindowhistory.html"><li>Home</li></a>
+					<a href="jswindowhistorynews.html"><li>News</li></a>
+					<a href="jswindowhistoryebook.html"><li>Ebook</li></a>
+					<a href="jswindowhistorymusic.html"><li>Music</li></a>
+					<a href="jswindowhistoryvideo.html"><li  class="active">Video</li></a>
+
+				</ul>
+
+			</nav>
+
+			<div>
+
+				<div class="historybar">
+
+					<span onclick="gobackward()">Go Backward</span>/<a href="jswindowhistory.html">Home</a>/<span onclick="goforward()">Go Forward</span>
+
+				</div>
+
+			</div>
+
+			<h1>I am Video Page Sir</h1>
+
+
+		</div>
+
+		<script type="text/javascript">
+
+			
+			console.log(window.history.length);
+
+			
+			function gobackward(){
+				// console.log("hay gobackward");
+
+				window.history.go(-1);
+
+			};
+
+			function goforward(){
+				// console.log("hay go forward");
+
+				window.history.go(1);
+			};
+
+
+		</script>
+
+	</body>
+</html>

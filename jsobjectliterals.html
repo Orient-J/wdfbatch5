@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Object Literals</title>
+	</head>
+	<body>
+
+		<script type="text/javascript">
+
+			let name = "aung aung";
+			console.log(name);
+			console.log(typeof name);
+			console.table(name);
+			console.error(name);
+			console.warn(name);
+
+			let obj1 = {
+
+				firstname : "Kyaw",
+				lastname : "Pyae",
+				middlename : "Sone"
+
+			};
+
+			console.log(obj1);
+			console.log(typeof obj1);
+			console.table(obj1);
+
+			console.log(obj1.firstname);
+			console.error(obj1.lastname);
+			console.warn(obj1.middlename);
+
+			let obj2 = {
+
+				firstname : "Kyaw",
+				lastname : "Gyi",
+				age : 18,
+				married : true,
+				email : "kyawgyi@email.com", 
+				phone : "012345",
+				address : {
+
+					street : "Tarmwe",
+					city : "Yangon"
+				},
+				employee : false
+			};
+
+			console.log(obj2);
+			console.table(obj2);
+
+			console.log(obj2.firstname);
+			console.log(obj2.lastname);
+			console.log(obj2.age);
+			console.log(obj2.email);
+			console.log(obj2.married);
+			console.log(obj2.phone);
+			console.log(obj2.address);
+			//undefined
+			console.log(obj2.street);
+			console.log(obj2.address.street);
+			//undefined
+			console.log(obj2.city);
+			console.log(obj2.address.city);
+			console.log(obj2.employee);
+
+			let obj3 = {
+
+				fullname : "Kyaw Pyae Sone",
+				married : false,
+				age : 18,
+				phone : "09979247005",
+				address : {
+
+					street : "1st",
+					city : "Thingangyn",
+					nation : {
+
+						kayin : true,
+						rakhine : true
+					},
+
+					skin : "fair"
+				},
+
+				hobbies : ["sleep","eat","code","music","sport"],
+
+				getbirthday : function(){
+					return 2000;
+				},
+
+				getcurrentage : function(){
+					// return 2021 - age ; //error
+
+					// return 2021 - obj3.age; //main_object.key
+
+					return 2021 - this.age; // this === obj3(main object)
+				}
+
+			};
+
+			console.log(obj3);
+			console.table(obj3);
+			console.log(obj3.address.street);
+			console.log(obj3.address.nation.kayin);
+			console.log(obj3.address.skin);
+
+			console.log(obj3.hobbies[2]);
+
+			console.log(obj3.getbirthday());
+
+			console.log(obj3.getcurrentage());
+
+
+			const todolist = {
+				add : function(){
+					document.write("Add New Work","<br/>");
+				},
+
+				edit : function(x,y){
+					document.write(`Have to ${x} , ${y} stars`,"<br/>");
+				}
+
+				
+			};
+
+			console.log(todolist);
+
+			todolist.add();
+
+			todolist.edit("cook",5);
+
+			todolist.edit("eat","5+");
+
+			todolist.edit();
+
+			// todolist.delete(); // error
+
+			todolist.delete = function(){
+				document.write("Delete all notes");
+			};
+
+			todolist.delete();
+			
+		</script>
+	</body>
+</html>
+
+<!-- 
+
+variable = {
+	
+	key : value,
+
+	key : value,
+
+	key : value
+};
+
+ -->
+
+
+
+<!-- 28OBJ -->

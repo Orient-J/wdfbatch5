@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<title>Combinator Selector</title>
+
+		<link href="./css/combinatorstyle.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+
+		<h4>Tag to Tag</h4>
+
+			<div> <span>I am span tag inside of div</span> </div>
+
+			<div>I am div tag outside of div</div>
+
+			<span>I am span tag outside of div</span>
+
+		<hr/>
+
+		<h4>Tag to Multi Tags</h4>
+
+			<div> <span> <p>I am p tag inside of div > span > p</p> </span> </div>
+
+			<div> <p>  I am p tag inside of div > p </p> </div>
+
+			<span> <p> I am p tag inside of span > p  </p> </span>
+
+		<hr/>
+
+		<h4>Multi Tags to Class</h4>
+
+			<div> 
+
+				<span> <small class="name"> I am small tag inside of div > span > small </small> </span> 
+
+				<p class="name"> I am p tag inside of div > p(name) </p>
+
+				<p> I am p tag inside of div > p </p>
+
+			</div>
+
+		<hr/>
+
+		<h4>Tag to Class</h4>
+
+			<div>
+
+				<p class="address"> I am p tag inside of div > p </p>
+
+				<span> <b class="address"> I am b tag inside of div > span > b </b> </span>
+
+			</div>
+
+		<hr/>
+
+		<h4>Tag to Multi Class</h4>
+
+			<div>
+
+				<p class="name"> I am p tag inside of div > p(name)</p>
+
+				<span class="name"> <b class="age"> I am b tag inside of div > span(name) > b </b> </span>
+
+			</div>
+
+		<hr/>
+
+		<h4>Class To Class</h4>
+
+			<div class="bank">
+				
+				<b> I am b tag inside of div(bank)</b>
+
+				<br/>
+
+				<span class="money">
+
+				 	<b class="currency"> I am b tag inside of div(bank) > span(money) > b(currency) </b> 
+
+				 	<br/>
+
+				 	<b>Hello</b>
+
+				</span>
+
+			</div>
+
+		<hr/>		
+
+		<h4>Class to Tag</h4>
+
+
+			<div class="container">
+				
+				<p>I am p tag inside of div(container) > p</p>
+
+				<b>I am b tag inside of div(container) > b</b>
+
+			</div>
+
+		<hr/>
+
+		<h4>Class to Tags</h4>
+
+			<div class="container">
+
+				<p>I am p tag inside of div(container) > p</p>
+
+				<b><span>I am span tag inside of div(container) > b > span</span></b>
+
+			</div>
+
+		<hr/>			
+
+		<h4>Same Class</h4>
+
+			<div>
+
+				<ul>
+					<li class="mobile jpn">Sony</li>
+					<li class="mobile cn">Mi</li>
+					<li class="mobile us">iPhone</li>
+				</ul>
+
+			</div>
+
+		<hr/>
+
+		<h4>Class to same class</h4>
+
+			<div class="vehicle">
+
+				<ul>
+					<li class="car jpn">Toyota</li>
+					<li class="car cn">Suzuki</li>
+					<li class="car indo">Mazada</li>
+				</ul>
+
+			</div>
+
+		<hr/>
+
+		<h4>Class to Tag by group selector </h4>
+
+			<div class="div1">
+
+				<b> I am b tag inside of div(div1)</b>
+				<p> I am p tag inside of div(div1)</p>
+
+			</div>
+
+		<hr/>
+
+		<h4>Child Selector</h4>
+
+
+			<div class="div2">
+
+				<b>I am b tag inside of div(div2) > b 1</b>
+				<p>I am p tag inside of div(div2) > p 1</p>
+				<i>I am i tag inside of div(div2) > i 1</i>
+
+				<div class="div3">
+
+					<b>I am b tag inside of div(div2) > div(div3) > b 2</b>
+					<p>I am p tag inside of div(div2) > div(div3) > p 2</p>
+					<i>I am i tag inside of div(div2) > div(div3) > i 2</i>
+
+				</div>
+
+				<p>I am p tag inside of div(div2) > p 3</p>
+
+			</div>
+
+			<b>I am b tag outside of div(div2) > b 3</b>
+			<p>I am p tag outside of div(div2) > p 4</p>
+			<i>I am i tag outside of div(div2) > i 3</i>
+
+
+			
+		<hr/>
+
+
+		<h4>General Sibiling Selector</h4>
+
+			<div class="div4">
+
+				<b>I am b tag inside of div(div4) > b 1</b>
+				<p>I am p tag inside of div(div4) > p 1</p>
+				<i>I am i tag inside of div(div4) > i 1</i>
+
+				<div class="div5">
+
+					<b>I am b tag inside of div(div4) > div(div5) > b 2</b>
+					<p>I am p tag inside of div(div4) > div(div5) > p 2</p>
+					<i>I am i tag inside of div(div4) > div(div5) > i 2</i>
+
+				</div>
+
+				<b>I am b tag inside of div(div4) > b 3</b>
+				<p>I am p tag inside of div(div4) > p 3</p>
+				<i>I am i tag inside of div(div4) > i 3</i>
+
+			</div>
+
+			<div class="div6">
+
+				<b>I am b tag outside of div(div4) > div(div6) > b 4</b>
+				<p>I am p tag outside of div(div4) > div(div6) > p 4</p>
+				<i>I am i tag outside of div(div4) > div(div6) > i 4</i>
+
+			</div>
+
+			<b>I am b tag outside of div(div4) > div(div6) > b 5</b>
+			<p>I am p tag outside of div(div4) > div(div6) > p 5</p>
+			<i>I am i tag outside of div(div4) > div(div6) > i 5</i>
+			<p>I am p tag outside of div(div4) > div(div6) > p 6</p>
+			<b>I am b tag outside of div(div4) > div(div6) > b 6</b>
+			<p>I am p tag outside of div(div4) > div(div6) > p 7</p>
+			<i>I am i tag outside of div(div4) > div(div6) > i 6</i>
+
+
+		<hr/>
+
+		<h4>Adjacent Sibiling Selector</h4>
+
+		<b>I am b tag outside of div(div7/div8/div9) > b 8</b>
+
+		<div class="div7">
+
+			<b>I am b tag inside of div(div7) > b 1</b>
+			<p>I am p tag inside of div(div7) > p 1</p>
+			<i>I am i tag inside of div(div7) > i 1</i>
+
+			<div class="div8">
+
+				<b>I am b tag inside of div(div7) > div(div8) > b 2</b>
+				<p>I am p tag inside of div(div7) > div(div8) > p 2</p>
+				<i>I am i tag inside of div(div7) > div(div8) > i 2</i>
+
+			</div>
+
+			<b>I am b tag inside of div(div7) > b 3</b>
+			<p>I am p tag inside of div(div7) > p 3</p>
+			<i>I am i tag inside of div(div7) > i 3</i>
+
+		</div>
+
+		<b>I am b tag outside of div(div7/div8/div9) > b 7</b>
+		<p>I am p tag outside of div(div7/div8/div9) > p 8</p>
+		<p>I am p tag outside of div(div7/div8/div9) > p 9</p>
+
+		<div class="div9">
+
+			<b>I am b tag outside of div(div7/div8) > inside of div(div9) > b 4</b>
+			<p>I am p tag outside of div(div7/div8) > inside of div(div9) > p 4</p>
+			<i>I am i tag outside of div(div7/div8) > inside of div(div9) > i 4</i>
+
+		</div>
+
+		<b>I am b tag outside of div(div7/div8/div9) > b 5</b>
+		<p>I am p tag outside of div(div7/div8/div9) > p 5</p>
+		<i>I am i tag outside of div(div7/div8/div9) > i 5</i>
+		<p>I am p tag outside of div(div7/div8/div9) > p 6</p>
+		<b>I am b tag outside of div(div7/div8/div9) > b 6</b>
+		<p>I am p tag outside of div(div7/div8/div9) > p 7</p>
+		<i>I am i tag outside of div(div7/div8/div9) > i 6</i>
+
+
+
+
+	</body>
+</html>

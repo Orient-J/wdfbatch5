@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Js String Method</title>
+		<style type="text/css">
+
+			/*#mm{
+				color: red;
+				font-size: 50px;
+			}
+
+			#th{
+				font-family: Arial;
+				color: blue;
+			}*/
+
+		</style>
+	</head>
+	<body>
+
+		<div>
+			<h1 id="mm">Myanmar</h1>
+			<h1 id="th">Thailand</h1>
+		</div>
+
+
+		<script type="text/javascript">
+
+			//String Method
+
+			let val = "Maung Maung ";
+			let lv 	= "kyaw";
+			console.log(val);
+			console.log(val.length);
+
+			let nm = val + lv;
+			console.log(nm);
+
+			val += lv;
+
+			console.log(val);
+
+
+			//concat()
+
+			var firstname = "Zayar ";
+			var lastname = "kyaw";
+			var fullname = firstname.concat(lastname);
+
+			console.log(fullname);
+
+
+			//String is Character Array in js
+
+			console.log(fullname[3]);
+			console.log(fullname.length-1);
+			console.log(fullname[fullname.length-1]);
+			
+
+
+			//charAt()
+
+			console.log(fullname.charAt(0));
+			console.log(fullname.charAt(fullname.length-1));
+
+
+			//includes()
+
+			let fav = "My fav color is black color";
+
+			//true
+			console.log(fav.includes("black"));
+
+			//false
+			console.log(fav.includes("blue"));
+
+			//true
+			console.log(fav.includes("bla"));
+
+			//false
+			console.log(fav.includes("BLACK"));
+
+			//false
+			console.log(fav.includes("Black"));
+
+
+
+
+			//replace(old,new)
+
+			console.log(fav.replace("black","blue"))
+
+			//result = blueck
+
+			console.log(fav.replace("bla","blue"))
+
+
+			//result
+
+			console.log(fav.replace("color","parpar"))
+
+
+
+
+			//substring(index,length)
+
+			console.log(fav.substring(0,5)+"...");
+			console.log(fav.substring(0,5).concat("..."));
+
+
+
+			//Change Case
+
+			console.log(fav.toUpperCase());
+			console.log(fav.toLowerCase());
+
+
+			// Useful Style
+
+			document.getElementById("mm").style.color = "red";
+			document.getElementById("th").style.color = "blue";
+			document.getElementById('th').style.fontSize = "50px";
+			document.getElementById('th').style.fontFamily = "Arial";
+			// document.getElementById("th").style.display = "none";
+
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 5SM --> 

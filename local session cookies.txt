@@ -1,0 +1,7 @@
+Cookies 			Vs 		Local Storage 		Vs 		Session Storage
+
+br/sv      						br 				 			br
+4kb        						5-10 mbs         			5Mb
+all tabs   						all tabs 		 			private tab
+manually set    				manually set       			on tab close
+request							no request					no request
