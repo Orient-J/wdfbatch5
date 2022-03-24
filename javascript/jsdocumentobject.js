@@ -233,5 +233,74 @@ let val ;
 
     console.log(getfirstli,par);
 
+    // Sibiling
+
+        let sbl = getfirstli.nextElementSibling;
+
+        //      list item1      list item2      list item3          list item4      list item5
+        sbl = getfirstli.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+
+        // console.log(sbl);
+
+                    //list item1    list item1      list item3          list item2              list item1
+        let psbl = getfirstli.nextElementSibling.nextElementSibling.previousElementSibling.previousElementSibling;
+
+        console.log(psbl);
+
+        // Create Element
+
+        const newli = document.createElement("li"); // result = <li></li>
+
+        console.log(newli);
+
+        // Add ID
+
+        // console.log(newli.id); // result = ""
+
+        newli.id = "new-item"; // "" = "new-item"
+
+
+        // Add Class
+
+        // console.log(newli.className); // result = ""
+
+        newli.className = "list-group-item" // "" = "list-group-item"
+
+        console.log(newli);
+
+        // Add Attribute (qualifiedname,value)
+
+        newli.setAttribute("title","newitem");
+
+        console.log(newli);
+
+        // Create Text Node
+
+        newli.appendChild(document.createTextNode("Save Myanmar"));
+
+
+        const newlink = document.createElement("a");
+
+        newlink.href = "#";
+
+        // Add ID
+
+        newlink.id = "delete-item6";
+
+        // Add Class
+
+        newlink.className = "delete-item";
+
+        newlink.innerHTML = `<i class="fa-solid fa-trash-can"></i>`;
+
+        console.log(newlink);
+
+        newli.appendChild(newlink);
+
+        // console.log(newli);
+
+
+        document.querySelector("ul.list-group").appendChild(newli);
+
 
 // 12CEC
