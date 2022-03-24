@@ -25,7 +25,7 @@ body{
 }
 
 .card h3,
-.card h4{
+.card h4 , .card h2{
 	text-align: center;
 	letter-spacing: 2px;
 }

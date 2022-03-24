@@ -302,5 +302,34 @@ let val ;
 
         document.querySelector("ul.list-group").appendChild(newli);
 
+        // Replace Element
+
+        const newtitle = document.createElement("h2");
+
+        // Add ID
+        newtitle.ic = "tasktitle";
+
+        // Create Text Node
+        newtitle.appendChild(document.createTextNode("All My Lists"));
+
+        //console.log(newtitle);
+
+        const oldtitle = document.getElementById("tasktitle");
+        console.log(oldtitle);
+
+        const getcardaction = document.querySelector(".card-action");
+
+        // Replace Child (new,old)
+
+        getcardaction.replaceChild(newtitle,oldtitle);
+
+        // Remove Element
+
+        const getlis = document.querySelectorAll("li");
+
+        // console.log(getlis[0]);
+
+        getlis[0].remove();
+        getlis[4].remove();
 
 // 12CEC
