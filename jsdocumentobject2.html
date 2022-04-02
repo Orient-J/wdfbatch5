@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS document</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- custom css -->
+	<link href="css/jsdocumentobject.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+	<div class="container">
+		<div class="card">
+			<div class="card-content">
+				<h3 class="card-title">To Do List</h3>
+
+				<form id="task-form" class="form" action="db.php" method="GET">
+					
+					<div class="form-control">
+						<label for="task">Enter New Task</label>
+						<input type="text" name="task" id="task" class="task"/>
+						
+					</div>
+					<input type="submit" class="btn" value="Add Task"/>
+				</form>
+			</div>
+			<div class="card-action">
+				<h4 id="tasktitle">Tasks</h4>
+				
+				<ul class="list-group">
+					<li class="list-group-item">List Item 1 <a href="#" id="delete-item1" class="delete-item delete-me"><i class="fa-solid fa-trash-can"></i></a></li>
+					<li class="list-group-item">List Item 2 <a href="#" id="delete-item2" class="delete-item"><i class="fa-solid fa-trash-can"></i></a></li>
+					<li class="list-group-item">List Item 3 <a href="#" id="delete-item3" class="delete-item"><i class="fa-solid fa-trash-can"></i></a></li>
+					<li class="list-group-item">List Item 4 <a href="#" id="delete-item4" class="delete-item"><i class="fa-solid fa-trash-can"></i></a></li>
+					<li class="list-group-item">List Item 5 <a href="#" id="delete-item5" class="delete-item"><i class="fa-solid fa-trash-can"></i></a></li>
+					<!-- <li class="list-group-item">List Item 6 <a href="#" id="delete-item6" class="delete-item"><i class="fa-solid fa-trash-can"></i></a></li> -->
+				</ul>
+
+				<button class="clear-tasks">Clear Tasks</button>
+
+			</div>
+			<div class="moretasks">
+				<img src="https://raw.githubusercontent.com/Codelessly/FlutterLoadingGIFs/master/packages/cupertino_activity_indicator.gif" class="loading" alt="loading" tag="nini"/>		
+			</div>
+			
+		</div>
+	</div>
+
+
+<script src="js/jsdocumentobject.js" type="text/javascript"></script>
+</body>
+</html>

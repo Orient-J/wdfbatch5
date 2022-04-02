@@ -97,6 +97,7 @@ body{
 	background-color: red;
 	color: #fff;
 	border: none;
+	text-decoration: none;
 
 	padding: 3px 5px;
 	cursor: pointer;
