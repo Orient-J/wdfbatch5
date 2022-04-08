@@ -591,9 +591,9 @@
                     //     e.preventDefault();
                     // };
 
-                    document.body.addEventListener("click",evendelg);
+                    // document.body.addEventListener("click",evendelg);
 
-                    function evendelg(e){
+                    // function evendelg(e){
                         // console.log("i am working");
                         //
                         // console.log(e.target);
@@ -612,19 +612,46 @@
                         //     console.log("hay i am working");
                         // };
 
-                         if(e.target.parentElement.classList.contains("delete-item")){
-                             // console.log("hay i am working");
+document.querySelector("form").addEventListener("submit",function(e){
 
-                             // e.target.remove();
+    e.preventDefault();
+    // console.log("hay i am working");
 
-                             // e.target.parentElement.remove();
+    const getnewtask = document.getElementById("task").value;
 
-                             e.target.parentElement.parentElement.remove();
+    // console.log(getnewtask);
 
 
-                         };
+    // localStorage.setItem("mytask",getnewtask);
 
-                        e.preventDefault();
-                    };
+    let alltasks ;
+
+    if(localStorage.getItem("mytasks") === null){
+        alltasks = [];
+    }else{
+        alltasks = JSON.parse(localStorage.getItem("mytasks"));
+    }
+
+    alltasks.push(getnewtask);
+
+    // console.log(alltasks);
+
+    localStorage.setItem("mytasks",JSON.stringify(alltasks)); // set => json so get => json
+
+    window.location.reload();
+});
+
+
+// console.log(JSON.parse(localStorage.getItem("mytasks")));
+// console.log(typeof (localStorage.getItem("mytasks")));
+
+let getalltasks = localStorage.getItem("mytasks");
+    getalltasks = JSON.parse(localStorage.getItem("mytasks"));
+
+    console.log(getalltasks);
+
+    getalltasks.forEach(function(getalltask){
+        console.log(getalltask);
+    });
 
 // 12CEC
