@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Clock</title>
+        <style type="text/css">
+
+            body{
+                height:100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+        </style>
+    </head>
+    <body>
+
+
+        <h3 id="display">9:45:50 AM SUNDAY</h3>
+
+
+        <script type="text/javascript">
+
+            let getdisplay = document.getElementById("display");
+            const days = ["Sunday","Monthday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+            // console.log(days);
+            // console.log(days[1]);
+            // console.log(days[5]);
+
+
+            function startclock(){
+
+                let getdate = new Date();
+                // console.log(getdate);
+
+                let gethours = getdate.getHours();
+                // console.log(gethours);
+
+                let getminutes = getdate.getMinutes();
+                // console.log(getminutes);
+
+                let getseconds = getdate.getSeconds();
+                // console.log(getseconds);
+
+                let getday = getdate.getDay();
+                // console.log(getday);
+
+                // console.log(new Date().getDate());
+
+                let getampm;
+
+                switch(gethours > 12){
+                    case true:
+                        getampm = "PM";
+                        gethours = gethours - 12 ;
+                        break;
+
+                    case false:
+                        getampm = "AM";
+                        break;
+                };
+
+                // let setclock = gethours + " : " + getminutes + " : " + getseconds + " " + getampm + " " + days[getday];
+
+                let setclock = `${gethours} : ${getminutes} : ${getseconds}  ${getampm} ${days[getday]}`;
+
+                getdisplay.innerText = setclock;
+
+            };
+
+            startclock(); //die
+
+            setInterval(startclock,1000);
+
+        </script>
+    </body>
+</html>
