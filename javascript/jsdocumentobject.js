@@ -650,6 +650,8 @@ let getalltasks = localStorage.getItem("mytasks");
 
     console.log(getalltasks);
 
+
+
     getalltasks.forEach(function(getalltask){
         console.log(getalltask);
     });

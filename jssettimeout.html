@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Set Time Out</title>
+    </head>
+    </head>
+    <body>
+        
+
+            <div>
+                <h1 id="greeting">Welcome to our site...</h1>
+            </div>
+
+            <hr/>
+
+            <button type="submit" name="startalertbtn" id="startalertbtn" class="" onclick="startbtn()">startalart</button>
+            <button type="submit" name="clearalertbtn" id="clearalertbtn" class="" onclick="stopbtn()">clearalert</button>
+
+            <hr/>
+
+            <input type="type" name="url" id="url" class="url"  />
+            <input type="submit" id="urlgo" class="" onclick="gourl()" value="go url">
+            <input type="submit" id="urlgo" class="" onclick="favurl()" value="fav url">
+
+
+            <hr/>
+
+
+            <!--- Mouse Event in Html tag / Onmouseover and onmouseout -->
+
+                <div>
+                    <img id="img" class="img" width="200px" height="300px" alt="favicon" onmouseover="mouseover()" onmouseout="mouseout()" />
+                </div>
+
+                <hr/>
+
+                <img src="./img/icons/favicon3.png" id="myimg" class="" alt="myimg"  />
+
+                <select name="size" id="size" class="size"  onchange="imagesize(this)">  <!-- here "this" is similary to e.target and this is no need to call target like evet --> 
+                    <option selected disabled>Select</option>
+                    <option value="50">Small</option>
+                    <option value="250">Medium</option>
+                    <option value="350">Large</option>
+                </select>
+
+
+        <script type="text/javascript">
+
+            // For Greeting
+            
+                // window.setInterval(newmessage,2000);
+                // window.setTimeout(newmessage,2000);
+
+                function newmessage(){
+                    document.getElementById("greeting").textContent = "See you later...";
+                };
+
+            // For Alert
+
+                let alerttext;
+
+                function alertbox(){
+
+                    window.alert("Welcome Sir...");
+                }
+
+                function startbtn(){
+
+                    alertbox();
+
+                    alerttext = window.setInterval(alertbox,5000);
+                    // window.setTimeout(alertbox,2000);
+
+                }
+
+                function stopbtn(){
+                    console.log("i am working");
+                    window.clearInterval(alerttext);
+                }
+
+                
+
+                // For Url
+
+                function gourl(){
+
+                    let url = document.getElementById("url").value;
+
+                    window.location = "https://" + url;
+                }
+
+                function favurl(){
+                    
+                    window.location = "https://linkedin.com";
+                    
+                }
+
+                // Mouse Event
+
+                let getimg1 = document.getElementById("img");
+
+
+                window.onload = function(){
+                    getimg1.src = "./img/icons/favicon.png"
+                };
+
+                function mouseover(){
+                    getimg1.src = "./img/icons/favicon2.png";
+                };
+
+                function mouseout(){
+                    getimg1.src = "./img/icons/favicon3.png";
+                }
+
+
+                // For image Size
+
+                function imagesize(th){
+
+                    let getsize = document.getElementById("size").value;
+                    console.log(getsize);
+
+                    // console.log(th);
+                    // console.log(th.value);
+
+                    getsize = th.value;
+                    let getimg = document.getElementById("myimg");
+                    // getimg.width = getsize+"px";  // width attribute is not support pixel unit but width from style tag is 
+                    getimg.width = getsize;
+
+                    // console.log(th);
+                    // console.log(th.parentElement);
+
+
+                            
+			 		            // Select	div
+                    // console.log(th.parentElement.myimg);
+
+                }
+
+
+
+        </script>
+    </body>
+</html>
