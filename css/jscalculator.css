@@ -30,37 +30,67 @@ body{
     box-shadow: 2px 3px 20px rgba(225,225,225,0.3);
 
     padding: 50px 25px;
+
+    transform: translateX(-300%);
+
+    animation: animationone 0.5s ease-out forwards;
 }
 
 .display-box{
     /* background-color: blue; */
     width: 100%;
-    height: 25%;
+    height: 20%;
 
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
     /* margin-bottom: 10px; */
 
 }
 
-.display{
+.display-boxtwo{
+    /* background-color: blue; */
+    width: 100%;
+    height: 5%;
+
+    /* padding-bottom: 10px; */
+    margin-bottom: 5px;
+    margin-top: 5px;
+
+}
+
+
+
+.display,
+.displaytwo{
     background-color: inherit;
     color: #fff;
     width: 100%;
     height: 100%;
     font-size: 50px;
+    font-weight: 800;
     text-align: right;
     border: none;
-    border-bottom: 2px solid orange;
 
     padding-top: 15%;
 }
 
+.displaytwo{
+    color: #777;
+    font-size: 16px;
+ 
+    border-bottom: 2px solid orange;
+
+    padding-top: 0px;
+}
+
 .display::-webkit-inner-spin-button,
-.display::-webkit-outer-spin-button{
+.display::-webkit-outer-spin-button,
+.displaytwo::-webkit-inner-spin-button,
+.displaytwo::-webkit-outer-spin-button{
     -webkit-appearance: none;
 }
 
-.display:focus{
+.display:focus,
+.displaytwo:focus{
     outline: none;
 }
 
@@ -107,7 +137,7 @@ body{
     border-radius: 50%;
 
     transform: scale(1.1);
-    filter: blur(20px);
+    filter: blur(50px);
     opacity: 0;
 
     transition: all 0.2s;
@@ -149,5 +179,34 @@ body{
     transform: scale(1);
     filter: blur(0px);
     opacity: 1;
+}
+
+
+.title{
+    color: orange;
+    letter-spacing: 2px;
+    margin-left: 10%;
+}
+
+.title h1{
+    font-size: 3rem;
+    transform: translateX(300%);
+
+    animation-name: animationone;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.title p{
+    font-size: 20px;
+}
+
+@keyframes animationone{
+
+    to{
+        transform: translatex(0px);
+    }
+
 }
 
