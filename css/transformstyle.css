@@ -94,7 +94,7 @@ p.text{
 
 	display:flex;
 	justify-content:center;/*horizontal center*/
-	align-items:center;/*vertical center*/
+	align-items:center;/*vertical center */
 
 	margin:auto;
 
@@ -121,7 +121,7 @@ p.text{
 	background:conic-gradient(
 		rebeccapurple 40%,
 		violet 0 70%,
-		aqua 0 100%
+		aqua 0 20%
 		);
 	border-radius:50%;/*100%*/
 
@@ -140,7 +140,7 @@ p.text{
 	top:-50px;
 	
 
-	z-index:4;
+	z-index:100;
 
 	animation-name:myani;
 	animation-duration:60s;

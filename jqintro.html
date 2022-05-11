@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JQuery Intro</title>
+    </head>
+    <body>
+
+        <div>
+            <h1 id="wel" class="come">Welcome to FriZone</h1>
+            <h2 id="br" class="br">Welcome to BroZone</h2>
+            <h3 id="si" class="si">Welcome to SisZone</h3>
+            <h4 id="fa" class="fa">Welcome to FamilyZone</h4>
+            <h5 id="sa" class="sa">Welcome to SafeZone</h5>
+            <h6 id="co" class="co">Welcome to ComfortZone</h6>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
+
+        <script type="text/javascript">
+        
+            console.log("hi");
+
+
+            // $ = is main signature of jquery
+
+                // $().ready(function(){
+
+                        // jquery code
+
+               // }) ; <=== is typical usage of jquery and inside is jquery code
+
+
+                // to use above one , must link jquery cdn 
+
+                $(document).ready(function(){
+
+                    console.log("hello");
+                    console.error("i am vengence");
+                    console.warn("I told you");
+
+                    // window.alert("alert box");
+                
+                    // if(window.confirm("Are you sure")){
+
+                    //     console.log("Yes I am working");
+                    // }else{
+                    //     console.log("No ,I am bored");
+                    // }
+
+
+                });
+
+
+                // if $(document) is ready() will work function()
+
+
+                const geth1 = document.getElementById("wel");
+                console.log(geth1);
+
+
+                // Call tag id class in jquery
+
+
+                // $("#wel");             id
+                // $(".come");           class
+                // $("h1");                 tag
+
+                
+                // Fadeout() - method = will disappear eventually without spacing
+
+                    // Syntax - $("selectors").fadeOut(time);
+
+                        // $("h1").fadeOut();
+
+                        // $("h1").fadeOut(1000);
+                        // $(".br").fadeOut(2000);
+                        // $("#si").fadeOut(3000);
+
+                // FadeTo() - method = will disappear eventually with  both time and opacity but there is spacing
+
+
+                    // Syntax - $("selectors").fadeTo(time,opacity);
+
+                    // $("#fa").fadeTo(2000,0.6);
+
+                // FadeToggle() - method = will both disappear and appear if use one time disappear and next time will appear 
+
+                    // Toggle have 2 features 
+
+                        // Syntax - $("selector").fadeToggle(time);
+
+                            // $("#sa").fadeToggle();
+                            // $("#sa").fadeToggle();
+
+                            // $(".sa").fadeToggle();
+                            // $(".sa").fadeToggle();
+
+
+                            $("#sa").fadeToggle(3000);
+                            $("#sa").fadeToggle(1000);
+
+
+        </script>
+    </body>
+</html>
+
+<!-- 8JQ -->
