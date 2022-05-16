@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Css Animation Homework 1</title>
+
+        <style type="text/css">
+
+            *{
+                perspective: 600px;
+            }
+
+            body{
+
+                height: 100vh;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                margin: 0;
+            }
+
+            .container{
+
+                width: 500px;
+                
+                background-color: cyan;
+            }
+
+            .div1{
+
+                width: 250px;
+                height: 100px;
+
+                background-color: tomato;
+
+                position: relative;
+
+                margin: auto;
+
+            }
+
+            .div2{
+
+                width: 200px;
+                height: 100px;
+
+                background-color: darkslateblue;
+
+                transform: rotateX(45deg);
+
+                padding: 50px;
+
+                position: absolute;
+                bottom:50%;
+                right: -25px;
+
+
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div class="container">
+
+            <div class="div1">DIV1
+                
+                <div class="div2">DIV2</div>
+
+            </div>
+
+        </div>
+
+    </body>
+</html>
